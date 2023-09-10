@@ -1,0 +1,84 @@
+.btn {
+  padding: 1.8rem 3rem;
+  border: none;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  background-color: $color-black;
+  color: $color-white;
+  outline: 0.3rem solid $color-primary;
+  outline-offset: 0.3rem;
+
+  &:hover {
+    cursor: pointer;
+    outline: 0.8rem solid $color-primary;
+  }
+
+  &:active {
+    outline: 0.3rem solid $color-primary;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 1.8rem;
+  }
+
+  &__submit {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  &__reset {
+    margin: 5rem auto;
+  }
+}
+
+.side-btns-section {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 999;
+  opacity: 0.8;
+}
+
+.side-btns {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    transform: translateX(-10rem);
+    transition: all 0.2s;
+    padding: 1.5rem;
+    margin: 0;
+    color: $color-white;
+    text-align: center;
+
+    &--1 {
+      font-size: 2.1rem;
+      background-color: $color-dark-blue2;
+      animation: moveInLeft 1s ease-out 0.2s forwards;
+    }
+
+    &--2 {
+      font-size: 2.1rem;
+      background-color: $color-dark-blue;
+      animation: moveInLeft 1s ease-out 0.6s forwards;
+    }
+
+    &--3 {
+      font-size: 2.2rem;
+      background-color: $color-light-blue;
+      animation: moveInLeft 1s ease-out 1s forwards;
+    }
+
+    &:hover {
+      padding: 1.5rem 2.2rem;
+    }
+  }
+}
