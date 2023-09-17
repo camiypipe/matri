@@ -180,3 +180,13 @@ body {
 
 .btn-outline-primary:hover {
   color: #fff; }
+
+@media (max-width: 850px) {
+  .save-date {
+    opacity: 0 !important;
+  }
+}
+
+.save-date {
+ opacity: 1;
+}
