@@ -259,10 +259,10 @@ body {
   }
 
   .ww-home-page {
-    max-height: 640px !important; }
+    max-height: 590px !important; }
 
   .ww-home-page:before {
-    max-height: 640px !important;
+    max-height: 590px !important;
   }
 
 }
