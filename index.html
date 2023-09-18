@@ -467,9 +467,13 @@
             method: 'POST',
             body: formData
         })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
-            document.getElementById('responseMessage').innerText = data;
+            if (data.result === 'success') {
+                document.getElementById('responseMessage').innerText = 'Formulario enviado exitosamente';
+            } else {
+                document.getElementById('responseMessage').innerText = 'Hubo un error al enviar el formulario.';
+            }
         })
         .catch(error => {
             console.error('Error:', error);
