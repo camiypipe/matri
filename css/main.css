@@ -51,6 +51,22 @@ body {
   }
 }
 
+@media (max-width: 340px) {
+  .ww-home-page .ww-wedding-announcement .ww-couple-name {
+    font-size: 45px;
+  }
+}
+
+.ww-date {
+  font-size: 4rem !important;
+}
+
+@media (max-width: 340px) {
+  .ww-date {
+    font-size: 3.5rem !important;
+  }
+}
+
 .ww-home-page:before {
   content: "";
   background-color: rgba(245, 138, 119, 0.2);
@@ -220,7 +236,7 @@ body {
 
 .ww-rsvp-detail:before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -238,11 +254,14 @@ body {
 
 /* Common Style */
 .ww-title {
-  font-family: "Great Vibes", cursive;
+  /* font-family: "Great Vibes", cursive; */
+  /* font-family: "Apple Chancery", cursive; */
+  /* font-family: "Bradley Hand", cursive; */
+  font-family: "URW Chancery L", cursive;
 }
 
 .ww-section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .btn-primary {
@@ -277,8 +296,8 @@ li {
   list-style-type: none;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
   text-transform: uppercase;
 }
 
