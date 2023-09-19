@@ -333,3 +333,13 @@ li span {
 .credits {
   font-size: 10px;
 }
+
+.form_embed {
+  height: 670px;
+}
+
+@media (max-width: 768px) {
+  .form_embed {
+    height: 800px;
+  }
+}
