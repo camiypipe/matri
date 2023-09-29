@@ -257,7 +257,8 @@ body {
   /* font-family: "Great Vibes", cursive; */
   /* font-family: "Apple Chancery", cursive; */
   /* font-family: "Bradley Hand", cursive; */
-  font-family: "URW Chancery L", cursive;
+  /* font-family: "URW Chancery L", cursive; */
+  font-family: 'Dancing Script', 'Great Vibes', cursive;
 }
 
 .ww-section {
