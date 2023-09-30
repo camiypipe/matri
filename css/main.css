@@ -344,3 +344,19 @@ li span {
     height: 800px;
   }
 }
+
+.form_embed_gpt {
+  height: 500px;
+  font-family: "Dosis", sans-serif !important;
+}
+
+@media (max-width: 768px) {
+  .form_embed_gpt {
+    height: 500px;
+    font-family: "Dosis", sans-serif !important;
+  }
+}
+
+.ww-gpt {
+  background-color: rgba(245, 138, 119, 0.2);
+}

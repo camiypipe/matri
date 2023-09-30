@@ -15,7 +15,6 @@
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500&amp;display=swap" />
   </noscript>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap" media="print"
     onload="this.media='all'" />
@@ -58,7 +57,6 @@
       <div class="ww-countdown text-center">
         <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
           <div class="container ww-announcement-container p-0">
-            <!-- <h1 id="headline">Falta:</h1> -->
             <div id="countdown">
               <ul class="p-0">
                 <li><span id="days"></span>días</li>
@@ -81,6 +79,7 @@
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#home">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#couple">Nuestra Familia</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#gallery">Algunas fotitos</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#chat">ChatGPT</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#spotify">Playlist</a></li>
                 <!-- <li class="nav-item"><a class="nav-link smooth-scroll" href="#rsvp">RSVP</a></li> -->
               </ul>
@@ -91,8 +90,8 @@
       <div class="ww-section pt-2" id="couple">
         <div class="container">
           <h2 class="h1 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">Nuestra Familia</h2>
-          <div class="row text-center">
-            <div class="col-12">
+          <div class="row text-center justify-content-center">
+            <div class="col-12 col-md-8">
               <div class="mt-3"><img class="img-fluid" src="images/los_tres.jpg" alt="Groom" data-aos="flip-left"
                   data-aos-duration="1000" />
                 <!-- <p class="pt-3 text-left text-muted">Hola, somos un trío de chufleteados :D</p>
@@ -124,168 +123,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="ww-section bg-light" id="events">
-        <div class="container ww-wedding-event">
-          <h2 class="h1 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">Wedding Events</h2>
-          <div class="row">
-            <div class="col-md-7 col-sm-12">
-              <div class="my-3">
-                <div class="h4">Wedding Party</div>
-                <ul>
-                  <li><i class="text-muted fas fa-map-marker-alt"></i><span class="pl-2 text-muted">Church End, Hendon,
-                      London, UK</span></li>
-                  <li class="pt-2"><i class="text-muted far fa-calendar-alt"></i><span class="pl-2 text-muted">20 Dec
-                      2018, 9AM - 6PM</span></li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit nulla enim arcu dictum lobortis, ac congue
-                  non hendrerit accumsan. Ut penatibus litora platea mi mus tempus eros proin, maecenas hac eget
-                  hendrerit inceptos per tempor sodales, id varius nulla commodo augue lectus pulvinar. Etiam suscipit
-                  leo sollicitudin vivamus tempor himenaeos vitae mattis dictum posuere, tincidunt aenean litora aptent
-                  facilisis eu est gravida.</p>
-              </div>
-            </div>
-            <div class="col-md-5 col-sm-12">
-              <div class="my-3"><img class="img-fluid" src="images/wedding-party.jpg" alt="Wedding Party"
-                  data-aos="fade-down-right" data-aos-duration="1000" /></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-7 col-sm-12">
-              <div class="my-3">
-                <div class="h4">Reception</div>
-                <ul>
-                  <li><i class="text-muted fas fa-map-marker-alt "></i><span class="pl-2 text-muted">City Place, Hendon,
-                      London, UK</span></li>
-                  <li class="pt-2"><i class="text-muted far fa-calendar-alt "></i><span class="pl-2 text-muted">22 Dec
-                      2018, 11AM - 6PM</span></li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing, elit nulla enim arcu dictum lobortis, ac congue
-                  non hendrerit accumsan. Ut penatibus litora platea mi mus tempus eros proin, maecenas hac eget
-                  hendrerit inceptos per tempor sodales, id varius nulla commodo augue lectus pulvinar. Etiam suscipit
-                  leo sollicitudin vivamus tempor himenaeos vitae mattis dictum posuere, tincidunt aenean litora aptent
-                  facilisis eu est gravida.</p>
-              </div>
-            </div>
-            <div class="col-md-5 col-sm-12">
-              <div class="my-3"><img class="img-fluid" src="images/reception.jpg" alt="Reception"
-                  data-aos="fade-up-right" data-aos-duration="1000" /></div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- <div class="ww-section" id="people">
-        <div class="container ww-couple-friends">
-          <h2 class="h1 text-center pt-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">Groomsmen &
-            Bridesmaids</h2>
-          <div class="carousel slide" id="ww-carouselIndicator" data-ride="carousel" data-aos="zoom-in-up"
-            data-aos-duration="1000">
-            <ol class="carousel-indicators">
-              <li class="active" data-target="#ww-carouselIndicator" data-slide-to="0"></li>
-              <li data-target="#ww-carouselIndicator" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card d-block mb-3"><img class="card-img-top" src="images/groom-men-1.jpg"
-                        alt="Groom Men 1" />
-                      <div class="card-body text-center">
-                        <div class="h5">Bryan Berry</div>
-                        <p class="mb-0 text-muted">Best Friend</p>
-                        <p class="text-muted">Groomsmen</p>
-                        <div class="ww-social-links"><a class="btn btn-link" href="#"><i class="fab fa-facebook-f"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-twitter"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i
-                              class="fab fa-google-plus-g" aria-hidden="true"></i></a><a class="btn btn-link"
-                            href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card d-block mb-3"><img class="card-img-top" src="images/groom-men-2.jpg"
-                        alt="Groom Men 2" />
-                      <div class="card-body text-center">
-                        <div class="h5 text-center">Kevin Johnston</div>
-                        <p class="mb-0 text-muted">Room Mate</p>
-                        <p class="text-muted">Groomsmen</p>
-                        <div class="ww-social-links"><a class="btn btn-link" href="#"><i class="fab fa-facebook-f"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-twitter"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i
-                              class="fab fa-google-plus-g" aria-hidden="true"></i></a><a class="btn btn-link"
-                            href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card d-block mb-3"><img class="card-img-top" src="images/groom-men-3.jpg"
-                        alt="Groom Men 3" />
-                      <div class="card-body text-center">
-                        <div class="h5 text-center">Arthur Wright</div>
-                        <p class="mb-0 text-muted">Friend</p>
-                        <p class="text-muted">Groomsmen</p>
-                        <div class="ww-social-links"><a class="btn btn-link" href="#"><i class="fab fa-facebook-f"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-twitter"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i
-                              class="fab fa-google-plus-g" aria-hidden="true"></i></a><a class="btn btn-link"
-                            href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card d-block mb-3"><img class="card-img-top" src="images/bride-maid-1.jpg"
-                        alt="Bride Maid 1" />
-                      <div class="card-body text-center">
-                        <div class="h5">Rachel Lawson</div>
-                        <p class="mb-0 text-muted">Best Friend</p>
-                        <p class="text-muted">Bridesmaids</p>
-                        <div class="ww-social-links"><a class="btn btn-link" href="#"><i class="fab fa-facebook-f"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-twitter"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i
-                              class="fab fa-google-plus-g" aria-hidden="true"></i></a><a class="btn btn-link"
-                            href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card d-block mb-3"><img class="card-img-top" src="images/bride-maid-2.jpg"
-                        alt="Bride Maid 2" />
-                      <div class="card-body text-center">
-                        <div class="h5 text-center">Betty George</div>
-                        <p class="mb-0 text-muted">Room Mate</p>
-                        <p class="text-muted">Bridesmaids</p>
-                        <div class="ww-social-links"><a class="btn btn-link" href="#"><i class="fab fa-facebook-f"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-twitter"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i
-                              class="fab fa-google-plus-g" aria-hidden="true"></i></a><a class="btn btn-link"
-                            href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card d-block mb-3"><img class="card-img-top" src="images/bride-maid-3.jpg"
-                        alt="Bride Maid 3" />
-                      <div class="card-body text-center">
-                        <div class="h5 text-center">Emma Snyder</div>
-                        <p class="mb-0 text-muted">Friend</p>
-                        <p class="text-muted">Bridesmaids</p>
-                        <div class="ww-social-links"><a class="btn btn-link" href="#"><i class="fab fa-facebook-f"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i class="fab fa-twitter"
-                              aria-hidden="true"></i></a><a class="btn btn-link" href="#"><i
-                              class="fab fa-google-plus-g" aria-hidden="true"></i></a><a class="btn btn-link"
-                            href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
       <div class="ww-section bg-light" id="gallery">
         <div class="ww-photo-gallery">
           <div class="container">
@@ -296,7 +133,7 @@
                 class="btn btn-outline-primary ww-filter-button" href="#" data-filter="vacation">Vacaciones</a><a
                 class="btn btn-outline-primary ww-filter-button" href="#" data-filter="general">General</a>
             </div>
-            <div class="ww-gallery" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+            <div class="ww-gallery justify-content-center" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
               data-aos-duration="1000" data-aos-offset="0">
               <div class="card-columns">
                 <div class="card" data-groups="[&quot;vacation&quot;,&quot;vacation2&quot;]"><a
@@ -346,23 +183,21 @@
                 <div class="card" data-groups="[&quot;general&quot;,&quot;wedding&quot;]">
                   <a href="images/general4.jpg" data-toggle="lightbox" data-gallery="ww-gallery"><img
                       class="img-fluid" src="images/general4.jpg" alt="Gallery Pic 2" /></a>
-                </div>
-                <div class="card" data-groups="[&quot;general&quot;,&quot;wedding&quot;]">
-                  <a href="images/general5.jpg" data-toggle="lightbox" data-gallery="ww-gallery"><img
-                      class="img-fluid" src="images/general5.jpg" alt="Gallery Pic 2" /></a>
-                </div>
-                
+                </div>                
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <iframe src="https://script.google.com/macros/s/AKfycbzRKUTwnu9-hRdF07wcq9eU7oZeK85OA-OKTLLv0_Q3CfH-m-iUdxF2UvyHtqgfol2MWQ/exec" width="100%" class="form_embed_gpt" frameborder="0" id="chat"></iframe>
+
       <div class="ww-section bg-light" id="spotify">
         <div class="container" data-aos="zoom-in-up" data-aos-duration="1000">
           <div class="col text-center">
             <h2 class="h1 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">¡Agrega canciones a la Playlist!</h2>
-            <h2 class="h2 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">Hicimos esta lista de Spotify para que agregues esos temas imperdibles</h2>
+            <h2 class="h2 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">Hicimos esta lista de Spotify para que agregues esos temas imperdibles.</h2>
+            <h2 class="h3 text-center pb-3 ww-title" data-aos="zoom-in-down" data-aos-duration="1000">Haz click sobre "Matrimonio Cami y Pipe", y agrega canciones desde la app.</h2>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-10">
