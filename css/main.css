@@ -167,17 +167,22 @@ body {
   border-radius: none;
 }
 
+.ww-photo-gallery .card-columns {
+  -moz-column-count: 5;
+  column-count: 5;
+}
+
 @media (max-width: 992px) {
   .ww-photo-gallery .card-columns {
-    -moz-column-count: 2;
-    column-count: 2;
+    -moz-column-count: 4;
+    column-count: 4;
   }
 }
 
 @media (max-width: 576px) {
   .ww-photo-gallery .card-columns {
-    -moz-column-count: 1;
-    column-count: 1;
+    -moz-column-count: 3;
+    column-count: 3;
   }
 }
 
