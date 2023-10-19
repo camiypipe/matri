@@ -40,6 +40,52 @@
 </head>
 
 <body id="top">
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "b2938e14-10c7-4343-b91d-be487acd9b06",
+        apiHost: "http://35.193.83.23",
+        chatflowConfig: {
+            // topK: 2
+        },
+        theme: {
+            button: {
+                backgroundColor: "#3B81F6",
+                right: 20,
+                bottom: 20,
+                size: "medium",
+                iconColor: "white",
+                customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+            },
+            chatWindow: {
+                welcomeMessage: "¡Hola! Mi nombre es Mulán 🐶, ¡mucho gusto! Soy la perrita mascota de Camila y Felipe, los novios. ¿En qué puedo ayudarte hoy? 😊",
+                backgroundColor: "#ffffff",
+                height: 700,
+                width: 400,
+                fontSize: 16,
+                poweredByTextColor: "#303235",
+                botMessage: {
+                    backgroundColor: "#f7f8ff",
+                    textColor: "#303235",
+                    showAvatar: true,
+                    avatarSrc: "images/Mulan.png",
+                },
+                userMessage: {
+                    backgroundColor: "#3B81F6",
+                    textColor: "#ffffff",
+                    showAvatar: true,
+                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                },
+                textInput: {
+                    placeholder: "Consulta lo que quieras!",
+                    backgroundColor: "#ffffff",
+                    textColor: "#303235",
+                    sendButtonColor: "#3B81F6",
+                }
+            }
+        }
+    })
+  </script>
   <header></header>
   <div class="page-content">
     <div class="div">
@@ -192,52 +238,7 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="ww-section ww-rsvp-detail ww-gpt" id="chat">
-        <div class="container" data-aos="zoom-in-up" data-aos-duration="1000">
-          <div class="col text-center mt-3">
-            <h2 class="h1 ww-title pb-3" data-aos="zoom-in-down" data-aos-duration="1000">
-              ¿Tienes preguntas sobre nuestro matrimonio?
-            </h2>
-          </div>
-          <div class="row ww-rsvp-form justify-content-center">
-            <div class="col-md-10">
-              <div class="card-body">
-                <textarea id="prompt" rows="4" placeholder="Pregunta lo que quieras sobre el matrimonio, incluso puedes pedir consejos de qué usar ese día :D"></textarea>
-                <br>
-                <button onclick="getAnswer()">Enviar</button>
-                <div id="answer"></div>
-  
-                <script>
-                  async function getAnswer() {
-                    const prompt = document.getElementById("prompt").value;
-                    const answerContainer = document.getElementById("answer");
-  
-                    const response = await fetch('/chat', {
-                      method: 'POST',
-                      headers: {
-                        'Content-Type': 'application/json',
-                      },
-                      body: JSON.stringify({ input: prompt }),
-                    });
-  
-                    if (response.ok) {
-                      const data = await response.json();
-                      answerContainer.style.display = "block";
-                      answerContainer.innerHTML = "<strong>Respuesta:</strong><br>" + data.response;
-                    } else {
-                      answerContainer.style.display = "none";
-                      console.error('Error:', await response.text());
-                    }
-                  }
-                </script>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+      </div>    
 
       <div class="ww-section bg-light" id="spotify">
         <div class="container" data-aos="zoom-in-up" data-aos-duration="1000">
