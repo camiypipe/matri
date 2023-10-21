@@ -194,10 +194,6 @@ body {
   position: relative;
 }
 
-.ww-rsvp-detail .ww-rsvp-form {
-  padding-left: 20%;
-}
-
 @media (max-width: 768px) {
   .ww-rsvp-detail .ww-rsvp-form {
     padding-left: 10%;
@@ -211,8 +207,8 @@ body {
 }
 
 .ww-rsvp-detail .ww-rsvp-form .form-control {
-  background-color: rgba(222, 222, 222, 0.2);
-  color: #fff;
+  background-color: rgba(222, 222, 222, 0.8);
+  color: #000;
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -228,10 +224,10 @@ body {
   color: #dedede;
 }
 
-.ww-rsvp-detail .ww-rsvp-form select.form-control option {
+/* .ww-rsvp-detail .ww-rsvp-form select.form-control option {
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
-}
+} */
 
 .ww-rsvp-detail .ww-rsvp-form .btn-submit {
   background-color: rgba(245, 138, 119, 0.8);
@@ -241,7 +237,7 @@ body {
 
 .ww-rsvp-detail:before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -258,13 +254,14 @@ body {
 }
 
 /* Common Style */
-.ww-title {
-  /* font-family: "Great Vibes", cursive; */
-  /* font-family: "Apple Chancery", cursive; */
-  /* font-family: "Bradley Hand", cursive; */
-  /* font-family: "URW Chancery L", cursive; */
-  font-family: 'Dancing Script', 'Great Vibes', cursive;
+.ww-title-first {
+  font-family: 'Dancing Script', cursive;
 }
+
+.ww-title {
+  font-family: "URW Chancery L", cursive;
+}
+
 
 .ww-section {
   padding: 50px 0;
@@ -340,28 +337,20 @@ li span {
   font-size: 10px;
 }
 
-.form_embed {
-  height: 670px;
+.success-message {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .form_embed {
-    height: 800px;
-  }
-}
-
-.form_embed_gpt {
-  height: 500px;
-  font-family: "Dosis", sans-serif !important;
-}
-
-@media (max-width: 768px) {
-  .form_embed_gpt {
-    height: 500px;
-    font-family: "Dosis", sans-serif !important;
-  }
-}
-
-.ww-gpt {
-  background-color: rgba(245, 138, 119, 0.2);
+.fail-message {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
 }
