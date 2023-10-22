@@ -73,6 +73,27 @@
         }
       }
     })
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      setTimeout(() => {
+        var notification = document.createElement('div');
+        notification.innerText = '¿Tienes alguna pregunta?';
+        notification.style.position = 'fixed';
+        notification.style.bottom = '80px';  // Ajusta la posición según la ubicación de tu botón de chat
+        notification.style.right = '20px';   // Ajusta la posición según la ubicación de tu botón de chat
+        notification.style.padding = '10px';
+        notification.style.backgroundColor = '#3B81F6';
+        notification.style.color = 'white';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '9999';
+        document.body.appendChild(notification);
+
+        // Opcional: Elimina la notificación después de algunos segundos
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 20000);  // Elimina la notificación después de 5 segundos adicionales
+      }, 5000);  // Muestra la notificación después de 5 segundos
+    });
   </script>
   <header></header>
   <div class="page-content">
@@ -80,11 +101,12 @@
       <div class="ww-home-page" id="home">
         <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
           <div class="container ww-announcement-container">
-            <p class="ww-couple-name ww-title-first" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000">
+            <p class="ww-couple-name ww-title-first" data-aos="zoom-in-down" data-aos-delay="300"
+              data-aos-duration="1000">
               Camila y Felipe</p><img class="img-fluid mt-1 save-date" src="images/laurel-1.png" alt="Heart"
               data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000" />
-            <p class="h2 mt-5 ww-title-first ww-date" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000"
-              data-aos-offset="10">9 de Marzo, 2024</p>
+            <p class="h2 mt-5 ww-title-first ww-date" data-aos="zoom-in-down" data-aos-delay="300"
+              data-aos-duration="1000" data-aos-offset="10">9 de Marzo, 2024</p>
           </div>
         </div>
       </div>
@@ -107,7 +129,8 @@
           <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ww-navbarNav"
               aria-controls="ww-navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
+                class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse text-uppercase" id="ww-navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#home">Inicio</a></li>
@@ -351,7 +374,7 @@
       successDiv.classList.add('success-message');
       successDiv.innerText = '¡Nos ha llegado tu respuesta correctamente!';
       form.appendChild(successDiv);
-      setTimeout(function() {
+      setTimeout(function () {
         form.removeChild(successDiv);
       }, 5000); // Remover el mensaje después de 5 segundos
     }
@@ -363,11 +386,11 @@
       failDiv.classList.add('fail-message');
       successDiv.innerText = '¡Hubo un error al enviar tu respuesta, lo sentimos :(';
       form.appendChild(failDiv);
-      setTimeout(function() {
+      setTimeout(function () {
         form.removeChild(failDiv);
       }, 5000); // Remover el mensaje después de 5 segundos
     }
-    
+
     function handleSubmit(event) {
       event.preventDefault();
       var data = {
