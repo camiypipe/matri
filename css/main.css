@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'URW Chancery L';
+  src: url('../fonts/urw_chancery_l_medium_italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
 body {
   font-family: "Dosis", sans-serif;
 }
