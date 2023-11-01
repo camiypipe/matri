@@ -9,7 +9,7 @@
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        birthday = new Date(nextYear, 2, 9, 18, 0, 0); // Año, mes (0-indexado), día, hora, minuto, segundo
+        birthday = new Date(nextYear, 2, 9, 18, 30, 0); // Año, mes (0-indexado), día, hora, minuto, segundo
     //end
     
     const countDown = birthday.getTime(),
@@ -25,7 +25,7 @@
   
           //do something later when date is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "It's my birthday!";
+            document.getElementById("headline").innerText = "Es hoy!!!";
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);

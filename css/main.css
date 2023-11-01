@@ -354,3 +354,16 @@ li span {
   margin-top: 10px;
   text-align: center;
 }
+
+.texto-tamano-medio {
+  font-size: 1.2rem;
+}
+
+.texto-tamano-grande {
+  font-size: 1.7rem;
+}
+
+.codigo-novios {
+  border-radius: 10px;
+  background-color: #ffdce2;
+}
