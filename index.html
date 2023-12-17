@@ -30,6 +30,10 @@
 <body id="top">
   <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+
+    // Variable para indicar si el teclado está habilitado o no
+    let isKeyboardEnabled = false;
+
     Chatbot.init({
       chatflowid: "581f5ae9-fe6d-4951-98a6-622e8f1d199c",
       apiHost: "https://chat.camiypipe.cl",
@@ -48,9 +52,9 @@
         chatWindow: {
           welcomeMessage: "¡Hola! Mi nombre es Mulán 🐶, ¡mucho gusto! Soy la perrita de Camila y Felipe. ¿En qué puedo ayudarte hoy? 😊",
           backgroundColor: "#ffffff",
-          height: 300,
+          height: 350,
           width: 320,
-          fontSize: 13,
+          fontSize: 14,
           poweredByTextColor: "#303235",
           botMessage: {
             backgroundColor: "#f7f8ff",
@@ -93,6 +97,23 @@
         setTimeout(() => {
           document.body.removeChild(notification);
         }, 20000);  // Elimina la notificación después de 5 segundos adicionales
+          // Agregar un event listener al campo de texto para habilitar el teclado al hacer clic
+        const textInputField = document.querySelector('.fw-chat-input input[type="text"]');
+        if (textInputField) {
+          textInputField.addEventListener('click', () => {
+            isKeyboardEnabled = true;
+          });
+
+          // Agregar un event listener al botón del chat para abrir el teclado
+          const chatButton = document.querySelector('.fw-button');
+          if (chatButton) {
+            chatButton.addEventListener('click', () => {
+              if (!isKeyboardEnabled) {
+                textInputField.focus();
+              }
+            });
+          }
+        }
       }, 5000);  // Muestra la notificación después de 5 segundos
     });
   </script>
