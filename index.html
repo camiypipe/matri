@@ -105,6 +105,16 @@
           setTimeout(() => {
             const textInputField = document.querySelector('.fw-chat-input input[type="text"]');
             if (textInputField) {
+              // Establecer el campo de texto como solo lectura
+              textInputField.setAttribute('readonly', true);
+
+              // Agregar listener para eliminar el atributo readonly al hacer clic
+              textInputField.addEventListener('click', () => {
+                textInputField.removeAttribute('readonly');
+              });
+
+              // Aquí puedes decidir si quieres mantener o eliminar la siguiente línea
+              // que enfoca el campo de texto
               textInputField.focus();
             }
           }, 1000); // Retraso de 1 segundo
@@ -404,7 +414,7 @@
         <div class="container text-center py-4">
           <p class="my-0 credits">&copy; Wonderful Wedding. All rights reserved.</p>
           <p class="mb-0 credits">Design - <a class="credit" href="https://templateflip.com"
-              target="_blank">TemplateFlip</a> - v1.16
+              target="_blank">TemplateFlip</a> - v1.17
           </p>
         </div>
       </div>
