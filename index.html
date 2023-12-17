@@ -83,8 +83,8 @@
         var notification = document.createElement('div');
         notification.innerText = '¡Pregúntame sobre el matrimonio!';
         notification.style.position = 'fixed';
-        notification.style.bottom = '80px';  // Ajusta la posición según la ubicación de tu botón de chat
-        notification.style.right = '20px';   // Ajusta la posición según la ubicación de tu botón de chat
+        notification.style.bottom = '80px';
+        notification.style.right = '20px';
         notification.style.padding = '10px';
         notification.style.backgroundColor = '#f58a77';
         notification.style.fontSize = '20px';
@@ -96,12 +96,21 @@
         // Opcional: Elimina la notificación después de algunos segundos
         setTimeout(() => {
           document.body.removeChild(notification);
-        }, 20000);  // Elimina la notificación después de 5 segundos adicionales
-          // Agregar un event listener al campo de texto para habilitar el teclado al hacer clic
+        }, 20000);
+
+        // Agregar un event listener al campo de texto para habilitar el teclado al hacer clic
         const textInputField = document.querySelector('.fw-chat-input input[type="text"]');
         if (textInputField) {
           textInputField.addEventListener('click', () => {
             isKeyboardEnabled = true;
+          });
+
+          // Evitar el zoom al hacer clic en el campo de texto
+          textInputField.addEventListener('touchstart', (e) => {
+            if (!isKeyboardEnabled) {
+              e.preventDefault();
+              textInputField.focus();
+            }
           });
 
           // Agregar un event listener al botón del chat para abrir el teclado
@@ -114,7 +123,7 @@
             });
           }
         }
-      }, 5000);  // Muestra la notificación después de 5 segundos
+      }, 5000);
     });
   </script>
   <header></header>
