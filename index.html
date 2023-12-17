@@ -54,7 +54,7 @@
           backgroundColor: "#ffffff",
           height: 350,
           width: 320,
-          fontSize: 14,
+          fontSize: 16,
           poweredByTextColor: "#303235",
           botMessage: {
             backgroundColor: "#f7f8ff",
@@ -97,33 +97,19 @@
         setTimeout(() => {
           document.body.removeChild(notification);
         }, 20000);
-
-        // Agregar un event listener al campo de texto para habilitar el teclado al hacer clic
-        const textInputField = document.querySelector('.fw-chat-input input[type="text"]');
-        if (textInputField) {
-          textInputField.addEventListener('click', () => {
-            isKeyboardEnabled = true;
-          });
-
-          // Evitar el zoom al hacer clic en el campo de texto
-          textInputField.addEventListener('touchstart', (e) => {
-            if (!isKeyboardEnabled) {
-              e.preventDefault();
+      }, 5000);
+      const chatButton = document.querySelector('.fw-button');
+      if (chatButton) {
+        chatButton.addEventListener('click', () => {
+          // Retrasar el enfoque en el campo de entrada
+          setTimeout(() => {
+            const textInputField = document.querySelector('.fw-chat-input input[type="text"]');
+            if (textInputField) {
               textInputField.focus();
             }
-          });
-
-          // Agregar un event listener al botón del chat para abrir el teclado
-          const chatButton = document.querySelector('.fw-button');
-          if (chatButton) {
-            chatButton.addEventListener('click', () => {
-              if (!isKeyboardEnabled) {
-                textInputField.focus();
-              }
-            });
-          }
-        }
-      }, 5000);
+          }, 1000); // Retraso de 1 segundo
+        });
+      }
     });
   </script>
   <header></header>
@@ -418,7 +404,7 @@
         <div class="container text-center py-4">
           <p class="my-0 credits">&copy; Wonderful Wedding. All rights reserved.</p>
           <p class="mb-0 credits">Design - <a class="credit" href="https://templateflip.com"
-              target="_blank">TemplateFlip</a> - v1.15
+              target="_blank">TemplateFlip</a> - v1.16
           </p>
         </div>
       </div>
