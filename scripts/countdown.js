@@ -8,7 +8,7 @@
         dd = String(today.getDate()).padStart(2, "0"),
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
+        nextYear = yyyy,
         birthday = new Date(nextYear, 2, 9, 18, 30, 0); // Año, mes (0-indexado), día, hora, minuto, segundo
     //end
     
