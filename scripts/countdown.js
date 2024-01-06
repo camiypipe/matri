@@ -4,15 +4,10 @@
           hour = minute * 60,
           day = hour * 24;
   
-    let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy,
-        birthday = new Date(nextYear, 2, 9, 18, 30, 0); // Año, mes (0-indexado), día, hora, minuto, segundo
+        wedding = new Date(2024, 2, 9, 18, 30, 0); // Año, mes (0-indexado), día, hora, minuto, segundo
     //end
     
-    const countDown = birthday.getTime(),
+    const countDown = wedding.getTime(),
         x = setInterval(function() {    
   
           const now = new Date().getTime(),
